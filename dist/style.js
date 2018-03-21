@@ -66,15 +66,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/assets/less/main.less");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/assets/less/global_app.less");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/assets/less/main.less":
-/*!***********************************!*\
-  !*** ./src/assets/less/main.less ***!
-  \***********************************/
+/***/ "./src/assets/less/global_app.less":
+/*!*****************************************!*\
+  !*** ./src/assets/less/global_app.less ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

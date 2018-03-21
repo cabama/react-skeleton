@@ -8,14 +8,15 @@ import {
   Link
 } from 'react-router-dom'
 
+// Redux SetUp
 import { defaultStore, AppStore } from './redux/store/defaultStore';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
-
 import { numberReducer } from './redux/reducers/numericReducer';
-
+// Materia-UI SetUp
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// Containers && Components
+import { Header } from './components/Header'
 import Main from './containers/Main'
-import { Hello } from './components/hello';
+import { IndexPage } from './containers/Travel/IndexPage';
 
 export class App extends React.Component {
 
@@ -34,8 +35,9 @@ export class App extends React.Component {
           <Provider store={this.store}>
             <Router>
               <div>
-                <Route exact path='/' component={Main} />
-                <Route exact path='hello' component={Hello} />
+                <Route component={Header}/>
+                <Route exact path='/' component={IndexPage} />
+                <Route path='/hello' component={Main} />
               </div>
             </Router>
           </Provider>

@@ -12,7 +12,7 @@ module.exports = {
     // react: "./node_modules/react/umd/react.development.js",
     // reactDom: "./node_modules/react-dom/umd/react-dom.development.js",
     app: "./src/index.tsx",
-    style: "./src/assets/less/main.less"
+    style: "./src/assets/less/global_app.less"
   },
   output: {
     filename: '[name].js',
@@ -33,6 +33,8 @@ module.exports = {
   devServer: {
     host: '0.0.0.0',
     port: 8080,
+    historyApiFallback: true,
+
   },
 
   module: {
@@ -106,7 +108,7 @@ module.exports = {
     new HtmlWebpackPlugin({ template: './src/index.html' }),
     new ExtractTextPlugin({
       filename: (getPath) => {
-        return getPath('main.css').replace('../js', '../css');
+        return getPath('global_app.css').replace('../js', '../css');
       },
       allChunks: true
     })  ]
